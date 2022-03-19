@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Homepage">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridfood"
+            android:layout_width="409dp"
+            android:layout_height="1017dp"
+            app:columnCount="2"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rowCount="8">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <ImageView
+                    android:id="@+id/kajukatliImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/kajukatli"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/kajukatliTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kajukatliImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Kaju katli"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/kajukatliButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kajukatliTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addKajukatli"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="1"
+                app:layout_row="0">
+
+                <ImageView
+                    android:id="@+id/besanladooImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/besan_ladoo"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/besanladooTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/besanladooImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Besan Ladoo"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/besanladooButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/besanladooTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addBesanladoo"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="0"
+                app:layout_row="1">
+
+                <ImageView
+                    android:id="@+id/gulabjamunImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/gulab_jamun"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/gulaabjamunTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gulabjamunImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Gulab Jamun"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/gulaabjamunButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gulaabjamunTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addGulaabjamun"
+                    android:text="Add" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="1"
+                app:layout_row="1">
+
+                <ImageView
+                    android:id="@+id/kheerImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/kheer"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/kheerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kheerImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Kheer"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/kheerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kheerTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addKheer"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="0"
+                app:layout_row="2">
+
+                <ImageView
+                    android:id="@+id/badaamhalwaImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/badaam_halva"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/badaamhalwaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/badaamhalwaImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Badaam Halwa"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/badaamhalwaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/badaamhalwaTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addBadaamhalwa"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="1"
+                app:layout_row="2">
+
+                <ImageView
+                    android:id="@+id/rasgullaImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/rasagola"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/rasgullaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rasgullaImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Rasgulla"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/rasgullaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rasgullaTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addRasgulla"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="0"
+                app:layout_row="3">
+
+                <ImageView
+                    android:id="@+id/gujiyaImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/gujiya"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/gujiyaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gujiyaImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Gujiya"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/gujiyaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gujiyaTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addGujiya"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="2dp"
+                android:background="#FFC300"
+                app:layout_column="1"
+                app:layout_row="3">
+
+                <ImageView
+                    android:id="@+id/chamchamImageView"
+                    android:layout_width="201dp"
+                    android:layout_height="162dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/cham_cham"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/chamchamTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chamchamImageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Cham Cham"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <Button
+                    android:id="@+id/chamchamButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chamchamTextView"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="43dp"
+                    android:layout_marginEnd="43dp"
+                    android:backgroundTint="#4DC523"
+                    android:onClick="addChamcham"
+                    android:text="Add"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+            </RelativeLayout>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginBottom="33dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridfood">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:onClick="confirmOrder"
+                android:text="Order"
+                android:backgroundTint="#e81900"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
